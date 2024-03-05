@@ -160,30 +160,23 @@ li + .content__list-item {
   letter-spacing: 0em;
 }
 
-.search-form__pseudo-checkbox {
+input[type='checkbox'] + .search-form__pseudo-checkbox {
   display: inline-block;
   width: 19px;
   height: 19px;
+  background-color: transparent;
   border: 1px solid #fff;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-form__pseudo-checkbox::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 13px;
-  height: 13px;
+input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
   background-color: #fff;
-  border: 2px solid #fff;
-  opacity: 0;
-}
-
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
-  opacity: 1;
 }
 
 .search-form__textfield {
